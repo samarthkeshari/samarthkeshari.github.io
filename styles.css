@@ -1,6 +1,7 @@
 .header {
     text-align: center;
     font-family:'Courier New', Courier, monospace;
+    padding-bottom: 5px;
 }
 
 body {
@@ -144,12 +145,14 @@ text {
 #overview-section {
     text-align: left;
     margin-left: 75px;
+    padding-top: 5px;
     font-family:'Courier New', Courier, monospace;
 }
 
 #state-section {
     text-align: left;
     margin-left: 75px;
+    padding-top: 5px;
     display: none;
     font-family:'Courier New', Courier, monospace;
 }
@@ -157,6 +160,7 @@ text {
 #county-section {
     text-align: left;
     margin-left: 75px;
+    padding-top: 5px;
     display: none;
     font-family:'Courier New', Courier, monospace;
 }
@@ -165,5 +169,6 @@ text {
     font-style: oblique;
     font-size:1em;
     margin-left: 75px;
+    padding-top: 5px;
     font-family:'Courier New', Courier, monospace;
 }
