@@ -8,10 +8,10 @@ var margin = {top: 20, right: 20, bottom: 110, left: 110},
 */
 
 var margin = {top: 20, right: 20, bottom: 110, left: 150},
-    margin2 = {top: 430, right: 20, bottom: 30, left: 150},
+    margin2 = {top: 330, right: 20, bottom: 30, left: 150},
     width = 1400 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom,
-    height2 = 500 - margin2.top - margin2.bottom;
+    height = 400 - margin.top - margin.bottom,
+    height2 = 400 - margin2.top - margin2.bottom;
 
 function displayChart(data){
 
@@ -21,7 +21,7 @@ function displayChart(data){
   var svg = d3.select("#my_dataviz")
       .append("svg")
           .attr("width", 1400)
-          .attr("height", 500);
+          .attr("height", 400);
 
   // Add X axis --> it is a date format
 
@@ -50,7 +50,7 @@ function displayChart(data){
   y2.domain(y.domain());
 
   ///
-  var casesMultiplyDate = "03-15-2020";
+  var casesMultiplyDate = "03-20-2020";
   var curveFlattenOverDate = "06-15-2020";
   var wave2StartDate = "09-07-2020";
   var vaccineAdminDate = "02-26-2021";
