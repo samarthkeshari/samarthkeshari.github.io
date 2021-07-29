@@ -7,11 +7,11 @@ var margin = {top: 20, right: 20, bottom: 110, left: 110},
     height2 = 500 - margin2.top - margin2.bottom;
 */
 
-var margin = {top: 20, right: 20, bottom: 110, left: 200},
-    margin2 = {top: 430, right: 20, bottom: 30, left: 200},
-    width = 1200 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom,
-    height2 = 500 - margin2.top - margin2.bottom;
+var margin = {top: 20, right: 20, bottom: 110, left: 110},
+    margin2 = {top: 330, right: 20, bottom: 30, left: 110},
+    width = 1500 - margin.left - margin.right,
+    height = 400 - margin.top - margin.bottom,
+    height2 = 400 - margin2.top - margin2.bottom;
 
 function displayChart(data){
 
