@@ -1,8 +1,15 @@
 // set the dimensions and margins of the graph
-
+/*
 var margin = {top: 20, right: 20, bottom: 110, left: 110},
     margin2 = {top: 430, right: 20, bottom: 30, left: 110},
-    width = 1500 - margin.left - margin.right,
+    width = 1200 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom,
+    height2 = 500 - margin2.top - margin2.bottom;
+*/
+
+var margin = {top: 20, right: 20, bottom: 110, left: 200},
+    margin2 = {top: 430, right: 20, bottom: 30, left: 200},
+    width = 1200 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom,
     height2 = 500 - margin2.top - margin2.bottom;
 
@@ -97,7 +104,7 @@ function displayChart(data){
     .curve(d3.curveMonotoneX)
     .x(function(d) { return x(d.date); })
     .y0(height)
-    .y1(function(d) { return y(d.cases); })
+    .y1(function(d) { return y(d.cases); });
 
   var area2 = d3.area()
     .curve(d3.curveMonotoneX)
@@ -234,13 +241,15 @@ function displayChart(data){
       const closestYValue = data[closestIndex].cases;
       const closestZValue = closestDataPoint.deaths;
 
-      const formatDate = d3.timeFormat("%B %A %-d, %Y");
+      //const formatDate = d3.timeFormat("%B %A %-d, %Y");
+      const formatDate = d3.timeFormat("%-m/%-d/%y");
+
       tooltip.select("#date").text(formatDate(closestXValue));
       tooltip.select("#cases").html(closestYValue);
       tooltip.select("#deaths").html(closestZValue);
 
-      tooltip.style("left", (d3.event.pageX + 10) + "px")
-              .style("top", (d3.event.pageY +10 ) + "px")
+      tooltip.style("left", (d3.event.pageX-55) + "px")
+              .style("top", (d3.event.pageY+10) + "px")
 
 
       tooltip.style("opacity", 1);

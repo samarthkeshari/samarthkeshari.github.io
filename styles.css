@@ -106,7 +106,7 @@ text {
     border: 1px solid #ddd;
     border-top-color: transparent;
     border-left-color: transparent;
-    transform: translate(-50%, 50%) rotate(0deg);
+    transform: translate(-50%, 50%) rotate(90deg);
     transform-origin: center center;
     z-index: 10;
 }
@@ -119,7 +119,8 @@ text {
 }
 
 .area {
-    fill: steelblue;
+    fill: rgb(134, 190, 236);
+    stroke: #111010;
     clip-path: url(#clip);
   }
 
@@ -143,7 +144,6 @@ text {
 #overview-section {
     text-align: left;
     margin-left: 75px;
-    margin-top: 50px;
     font-family:'Courier New', Courier, monospace;
 }
 
@@ -167,6 +167,6 @@ text {
     font-style: oblique;
     font-size:1em;
     margin-left: 75px;
-    margin-top: 50px;
+    margin-top: 10px;
     font-family:'Courier New', Courier, monospace;
 }
