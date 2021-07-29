@@ -1,3 +1,172 @@
 .header {
     text-align: center;
+    font-family:'Courier New', Courier, monospace;
+}
+
+body {
+    margin: 0px;
+    overflow: hidden;
+}
+
+.line-path {
+    fill: none;
+    stroke: maroon;
+    stroke-width: 2;
+    stroke-linejoin: round;
+}
+
+.line {
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 2;
+    stroke-linejoin: round;
+}
+
+.line-path1 {
+    fill: none;
+
+    stroke-width: 2;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    mix-blend-mode: multiply;
+  }
+
+text {
+    font-family: sans-serif;
+}
+
+.tick text {
+    font-size: 1.5em;
+    fill: #635F5D;
+}
+
+.tick line {
+    stroke: #C0C0BB;
+}
+
+.axis-label {
+    font-size: 2em;
+    fill: #8E8883;
+}
+
+.title {
+    font-size: 1.5em;
+    fill: #111010;
+}
+
+#menus {
+    font-size: 1.2em;
+    text-align: left;
+    margin-left: 75px;
+    margin-bottom: 10px;
+    font-family:'Courier New', Courier, monospace;
+  }
+
+#menus select {
+    font-size: 1rem;
+    font-family:'Courier New', Courier, monospace;
+  }
+
+#menus select option {
+    font-size: 1rem;
+}
+
+#buttons {
+    text-align: left;
+    margin-left: 75px;
+    padding-bottom: 10px;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.tooltip {
+    opacity: 0;
+    position: absolute;
+    top: -14px;
+    left: 0;
+    padding: 0.6em 1em;
+    background: #fff;
+    text-align: center;
+    line-height: 1.4em;
+    font-size: 0.9em;
+    border: 1px solid #ddd;
+    z-index: 10;
+    transition: all 0.1s ease-out;
+    pointer-events: none;
+}
+
+
+.tooltip:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    background: white;
+    border: 1px solid #ddd;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    transform: translate(-50%, 50%) rotate(0deg);
+    transform-origin: center center;
+    z-index: 10;
+}
+
+.tooltip-date {
+    margin-bottom: 0.2em;
+    font-weight: 600;
+    font-size: 1.1em;
+    line-height: 1.4em;
+}
+
+.area {
+    fill: steelblue;
+    clip-path: url(#clip);
+  }
+
+.zoom {
+    cursor: move;
+    fill: none;
+    pointer-events: all;
+  }
+
+.listening-rect {
+    fill: transparent;
+  }
+
+.dotted {
+    stroke: #5c5c5c;
+    stroke-dasharray: 1 1;
+    fill: none;
+  }
+
+
+#overview-section {
+    text-align: left;
+    margin-left: 75px;
+    margin-top: 50px;
+    font-family:'Courier New', Courier, monospace;
+}
+
+#state-section {
+    text-align: left;
+    margin-left: 75px;
+    margin-top: 50px;
+    display: none;
+    font-family:'Courier New', Courier, monospace;
+}
+
+#county-section {
+    text-align: left;
+    margin-left: 75px;
+    margin-top: 50px;
+    display: none;
+    font-family:'Courier New', Courier, monospace;
+}
+
+#footer {
+    font-style: oblique;
+    font-size:1em;
+    margin-left: 75px;
+    margin-top: 50px;
+    font-family:'Courier New', Courier, monospace;
 }

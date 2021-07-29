@@ -1,18 +1,64 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>COVID-19</title>
+        <title>COVID-19 Cases Analysis</title>
         <link rel="stylesheet" href="styles.css">
-        <h1 class="header">COVID-19 Confirmed Cases Analysis</h1>
+        <h1 class="header">Rise & Fall of COVID-19 in the US</h1>
         <!-- Libraries can be included -->
         <script src="https://d3js.org/d3.v5.min.js"></script>
         <script type="module" src="main.js"></script>
   </head>
 
   <body>
-        <div id="textSection"></div>
-        <div id="svgSection"></div>
-        <div id="nextButton"></div>
-        <div id="previousButton"></div>
+      <div id="overview-section">
+            <h2>Overview</h2>
+            <p id="p-overview">This is overview section</p>
+      </div>
+
+      <div id="state-section">
+            <h2>State</h2>
+            <p id="p-state">This is state section</p>
+      </div>
+
+      <div id="county-section">
+            <h2>County</h2>
+            <p id="p-county">This is state section</p>
+      </div>
+
+      <div id="buttons">
+            <button id="P">Previous</button>
+            <button id="N">Next</button>
+      </div>
+      <div id="menus"></div>
+
+      <div id="my_dataviz">
+            <div id="tooltip" class="tooltip">
+
+                  <div class="tooltip-date">
+                      <span id="date"></span>
+                  </div>
+
+                  <div class="tooltip-Cases">
+                      Cases: <span id="cases"></span>
+                  </div>
+
+                  <div class="tooltip-Deaths">
+                      Deaths: <span id="deaths"></span>
+                  </div>
+
+            </div>
+      </div>
+
+      <footer id="footer">
+            !! Note -->
+            <ul>
+                  <li>Hold the small grey rectangle above on the left or right edges
+                        to zoom on the different areas of the chart</li>
+
+                  <li>Slide the small grey rectangle above from the left or right edges
+                              to brush on the different areas of the chart</li>
+            </ul>
+      </footer>
+
   </body>
 </html>
