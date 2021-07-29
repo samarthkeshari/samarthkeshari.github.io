@@ -12,7 +12,9 @@ function casesOverview(){
             data.forEach(d => {
                 d.cases = +d.cases;
                 d.deaths = +d.deaths;
-                d.date = new Date(d.date);
+                var datesplit = d.date.split("-");
+                d.date = new Date(datesplit[1]+'-'+datesplit[2]+"-"+datesplit[0]);
+                //d.date = new Date(d.date);
         });
         //var max = d3.max(data, function(d) { return d.date; });
         //console.log(data)

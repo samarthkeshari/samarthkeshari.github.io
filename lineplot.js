@@ -8,10 +8,10 @@ var margin = {top: 20, right: 20, bottom: 110, left: 110},
 */
 
 var margin = {top: 20, right: 20, bottom: 110, left: 150},
-    margin2 = {top: 330, right: 20, bottom: 30, left: 150},
+    margin2 = {top: 430, right: 20, bottom: 30, left: 150},
     width = 1400 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom,
-    height2 = 400 - margin2.top - margin2.bottom;
+    height = 500 - margin.top - margin.bottom,
+    height2 = 500 - margin2.top - margin2.bottom;
 
 function displayChart(data){
 
@@ -20,7 +20,7 @@ function displayChart(data){
   // append the svg object to the body of the page
   var svg = d3.select("#my_dataviz")
       .append("svg")
-          .attr("width", 1500)
+          .attr("width", 1400)
           .attr("height", 500);
 
   // Add X axis --> it is a date format
@@ -50,44 +50,122 @@ function displayChart(data){
   y2.domain(y.domain());
 
   ///
-  var wave1Date = '2020-10-21';
-  var wave2Date = '2021-07-20';
+  var casesMultiplyDate = "03-15-2020";
+  var curveFlattenOverDate = "06-15-2020";
+  var wave2StartDate = "09-07-2020";
+  var vaccineAdminDate = "02-26-2021";
+  var casesDropDate = "04-25-2021";
+  var lowestPointDate = "06-20-2021";
+  var fontsize = 12;
 
-  const wave1Line = svg
+  const annotLine1 = svg
     .append("g")
+    .attr("transform","translate(" + margin.left + "," + margin.top + ")")
     .append("rect")
-    .attr("class", "wave1")
     .attr("stroke-width", "1px")
     .attr("fill","maroon")
     .attr("width", "2px")
     .attr("height", height)
-    .attr("x",x(new Date(wave1Date)));
+    .attr("x",x(new Date(casesMultiplyDate)));
 
-  const wave2Line = svg
-    .append("g")
-    .append("rect")
-    .attr("class", "wave2")
-    .attr("stroke-width", "1px")
-    .attr("fill","maroon")
-    .attr("width", "2px")
-    .attr("height", height)
-    .attr("x",x(new Date(wave2Date)));
-
-  const wave1Text = svg.append("g")
+  const annotText1 = svg.append("g")
+    .attr("transform","translate(" + margin.left + "," + margin.top + ")")
     .append("text")
-    .attr("class", "wave1Text")
-    .attr("font-size",15)
-    .attr("x",x(new Date(wave1Date))-50)
+    .attr("font-size",fontsize)
+    .attr("x",x(new Date(casesMultiplyDate))+4)
     .attr("y", 20 )
-    .text("US WAVE-1");
+    .text("<-Cases Multiply(US)");
 
-  const wave2Text = svg.append("g")
+  const annotLine2 = svg
+    .append("g")
+    .attr("transform","translate(" + margin.left + "," + margin.top + ")")
+    .append("rect")
+    .attr("stroke-width", "1px")
+    .attr("fill","maroon")
+    .attr("width", "2px")
+    .attr("height", height)
+    .attr("x",x(new Date(curveFlattenOverDate)));
+
+  const annotText2 = svg.append("g")
+    .attr("transform","translate(" + margin.left + "," + margin.top + ")")
     .append("text")
-    .attr("class", "wave2Text")
-    .attr("font-size",15)
-    .attr("x",x(new Date(wave2Date))-50)
-    .attr("y", 20)
-    .text("US WAVE-2");
+    .attr("font-size",fontsize)
+    .attr("x",x(new Date(curveFlattenOverDate))+4)
+    .attr("y", 20 )
+    .text("<-Curve Flattening Over(US)");
+
+  const annotLine3 = svg
+    .append("g")
+    .attr("transform","translate(" + margin.left + "," + margin.top + ")")
+    .append("rect")
+    .attr("stroke-width", "1px")
+    .attr("fill","maroon")
+    .attr("width", "2px")
+    .attr("height", height)
+    .attr("x",x(new Date(wave2StartDate)));
+
+  const annotText3 = svg.append("g")
+    .attr("transform","translate(" + margin.left + "," + margin.top + ")")
+    .append("text")
+    .attr("font-size",fontsize)
+    .attr("x",x(new Date(wave2StartDate))+4)
+    .attr("y", 20 )
+    .text("<-Wave-2 Started(US)");
+
+  const annotLine4 = svg
+    .append("g")
+    .attr("transform","translate(" + margin.left + "," + margin.top + ")")
+    .append("rect")
+    .attr("stroke-width", "1px")
+    .attr("fill","maroon")
+    .attr("width", "2px")
+    .attr("height", height)
+    .attr("x",x(new Date(vaccineAdminDate)));
+
+  const annotText4 = svg.append("g")
+    .attr("transform","translate(" + margin.left + "," + margin.top + ")")
+    .append("text")
+    .attr("font-size",fontsize)
+    .attr("x",x(new Date(vaccineAdminDate))+4)
+    .attr("y", 20 )
+    .text("<-Vaccine Started(US)");
+
+  const annotLine5 = svg
+    .append("g")
+    .attr("transform","translate(" + margin.left + "," + margin.top + ")")
+    .append("rect")
+    .attr("stroke-width", "1px")
+    .attr("fill","maroon")
+    .attr("width", "2px")
+    .attr("height", height)
+    .attr("x",x(new Date(casesDropDate)));
+
+  const annotText5 = svg.append("g")
+    .attr("transform","translate(" + margin.left + "," + margin.top + ")")
+    .append("text")
+    .attr("font-size",fontsize)
+    .attr("x",x(new Date(casesDropDate))+4)
+    .attr("y", 20 )
+    .text("<-Cases Drop(US)");
+
+  const annotLine6 = svg
+    .append("g")
+    .attr("transform","translate(" + margin.left + "," + margin.top + ")")
+    .append("rect")
+    .attr("stroke-width", "1px")
+    .attr("fill","maroon")
+    .attr("width", "2px")
+    .attr("height", height)
+    .attr("x",x(new Date(lowestPointDate)));
+
+  const annotText6 = svg.append("g")
+    .attr("transform","translate(" + margin.left + "," + margin.top + ")")
+    .append("text")
+    .attr("font-size",fontsize)
+    .attr("x",x(new Date(lowestPointDate))+4)
+    .attr("y", 20 )
+    .text("<-Low Point(US)");
+
   /////
 
   var brush = d3.brushX()
@@ -205,11 +283,74 @@ function displayChart(data){
           .scale(width / (s[1] - s[0]))
           .translate(-s[0], 0));
 
-      d3.select(".wave1").attr("x",x(new Date(wave1Date)));
-      d3.select(".wave2").attr("x",x(new Date(wave2Date)));
+      //////
+      if ((x(new Date(casesMultiplyDate)) - x.range()[0]) > 10) {
+        annotLine1.attr("x",x(new Date(casesMultiplyDate)));
+        annotLine1.attr("display","block");
 
-      d3.select(".wave1Text").attr("x",x(new Date(wave1Date))-100);
-      d3.select(".wave2Text").attr("x",x(new Date(wave2Date))-100);
+        annotText1.attr("x",x(new Date(casesMultiplyDate))+4);
+        annotText1.attr("display","block");
+      } else {
+        annotLine1.attr("display","none");
+        annotText1.attr("display","none");
+      };
+
+      if ((x(new Date(curveFlattenOverDate)) - x.range()[0]) > 10) {
+        annotLine2.attr("x",x(new Date(curveFlattenOverDate)));
+        annotLine2.attr("display","block");
+
+        annotText2.attr("x",x(new Date(curveFlattenOverDate))+4);
+        annotText2.attr("display","block");
+      } else {
+        annotLine2.attr("display","none");
+        annotText2.attr("display","none");
+      };
+
+      if ((x(new Date(wave2StartDate)) - x.range()[0]) > 10) {
+        annotLine3.attr("x",x(new Date(wave2StartDate)));
+        annotLine3.attr("display","block");
+
+        annotText3.attr("x",x(new Date(wave2StartDate))+4);
+        annotText3.attr("display","block");
+      } else {
+        annotLine3.attr("display","none");
+        annotText3.attr("display","none");
+      };
+
+      if ((x(new Date(vaccineAdminDate)) - x.range()[0]) > 10) {
+        annotLine4.attr("x",x(new Date(vaccineAdminDate)));
+        annotLine4.attr("display","block");
+
+        annotText4.attr("x",x(new Date(vaccineAdminDate))+4);
+        annotText4.attr("display","block");
+      } else {
+        annotLine4.attr("display","none");
+        annotText4.attr("display","none");
+      };
+
+      if ((x(new Date(casesDropDate)) - x.range()[0]) > 10) {
+        annotLine5.attr("x",x(new Date(casesDropDate)));
+        annotLine5.attr("display","block");
+
+        annotText5.attr("x",x(new Date(casesDropDate))+4);
+        annotText5.attr("display","block");
+      } else {
+        annotLine5.attr("display","none");
+        annotText5.attr("display","none");
+      };
+
+      if ((x(new Date(lowestPointDate)) - x.range()[0]) > 10) {
+        annotLine6.attr("x",x(new Date(lowestPointDate)));
+        annotLine6.attr("display","block");
+
+        annotText6.attr("x",x(new Date(lowestPointDate))+4);
+        annotText6.attr("display","block");
+      } else {
+        annotLine6.attr("display","none");
+        annotText6.attr("display","none");
+      };
+
+      //////////
     };
 
     function zoomed() {
@@ -219,11 +360,6 @@ function displayChart(data){
       focus.select(".area").attr("d", area);
       focus.select(".axis--x").call(xAxis);
       context.select(".brush").call(brush.move, x.range().map(t.invertX, t));
-
-      d3.select(".wave1").attr("x",x(new Date(wave1Date)));
-      d3.select(".wave2").attr("x",x(new Date(wave2Date)));
-      d3.select(".wave1Text").attr("x",x(new Date(wave1Date))-200);
-      d3.select(".wave2Text").attr("x",x(new Date(wave2Date))-200);
     };
 
     /////
@@ -234,10 +370,8 @@ function displayChart(data){
 
       const closestIndex = data.findIndex(d => dateParser(d.date)===dateParser(hoveredDate));
       const closestDataPoint = data[closestIndex];
-      //console.log(closestIndex-1,closestIndex,closestDataPoint.cases,data[closestIndex-1].cases);
 
       const closestXValue = closestDataPoint.date;
-      //const closestYValue = closestDataPoint.cases;
       const closestYValue = data[closestIndex].cases;
       const closestZValue = closestDataPoint.deaths;
 
