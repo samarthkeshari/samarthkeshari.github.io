@@ -1,13 +1,13 @@
 import { displayChart } from './lineplot.js';
 import { dropdownMenu } from './dropdownMenu.js';
+import { data } from './main.js';
 
-var defaultCounty = 'California,Los Angeles';
-var data = 0;
-
+var defaultCounty = 'Alabama,Autauga';
 
 function displayCounties() {
     let options = [...new Set(data.map(d => d.county))].sort();
     var selectedData = data.filter(d => { return d.county == defaultCounty});
+
     displayChart(selectedData);
 
     dropdownMenu(d3.select('#menus'),{

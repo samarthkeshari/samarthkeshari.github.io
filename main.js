@@ -4,7 +4,26 @@ import {casesCounties} from './county.js';
 
 var current_slide =1;
 var previous_slide =0;
+var data = 0;
+function loadCountyData(){
 
+    if (data===0){
+        d3.csv('./data/us-counties.csv')
+            .then(loadedData => {
+                data = loadedData;
+                data.forEach(d => {
+                    d.county = d.state + ',' + d.county;
+                    d.cases = +d.cases;
+                    d.deaths = +d.deaths;
+                    d.date = new Date(d.date);
+
+
+                });
+
+            });
+        };
+
+};
 function previousButtonClick(){
     const prevButton = document.getElementById("P");
     const nextButton = document.getElementById("N");
@@ -52,6 +71,7 @@ function overview() {
     //addHtml();
     const prevButton = document.getElementById("P");
     prevButton.disabled = true;
+    loadCountyData();
     casesOverview();
 };
 
@@ -70,3 +90,5 @@ window.main = overview();
 //window.main = casesByStates();
 document.getElementById("P").onclick = previousButtonClick;
 document.getElementById("N").onclick = nextButtonClick;
+
+export {data};

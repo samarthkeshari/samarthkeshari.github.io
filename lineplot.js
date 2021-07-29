@@ -231,7 +231,7 @@ function displayChart(data){
 
       const closestXValue = closestDataPoint.date;
       //const closestYValue = closestDataPoint.cases;
-      const closestYValue = data[closestIndex-1].cases;
+      const closestYValue = data[closestIndex].cases;
       const closestZValue = closestDataPoint.deaths;
 
       const formatDate = d3.timeFormat("%B %A %-d, %Y");
