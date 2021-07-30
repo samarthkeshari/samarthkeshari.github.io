@@ -285,7 +285,7 @@ function displayChart(data){
           .translate(-s[0], 0));
 
       //////
-      if ((x(new Date(casesMultiplyDate)) - x.range()[0]) > 10) {
+      if ((x(new Date(casesMultiplyDate)) - x.range()[0]) > 1) {
         annotLine1.attr("x",x(new Date(casesMultiplyDate)));
         annotLine1.attr("display","block");
 
@@ -296,7 +296,7 @@ function displayChart(data){
         annotText1.attr("display","none");
       };
 
-      if ((x(new Date(curveFlattenOverDate)) - x.range()[0]) > 10) {
+      if ((x(new Date(curveFlattenOverDate)) - x.range()[0]) > 1) {
         annotLine2.attr("x",x(new Date(curveFlattenOverDate)));
         annotLine2.attr("display","block");
 
@@ -307,7 +307,7 @@ function displayChart(data){
         annotText2.attr("display","none");
       };
 
-      if ((x(new Date(wave2StartDate)) - x.range()[0]) > 10) {
+      if ((x(new Date(wave2StartDate)) - x.range()[0]) > 1) {
         annotLine3.attr("x",x(new Date(wave2StartDate)));
         annotLine3.attr("display","block");
 
@@ -318,7 +318,7 @@ function displayChart(data){
         annotText3.attr("display","none");
       };
 
-      if ((x(new Date(vaccineAdminDate)) - x.range()[0]) > 10) {
+      if ((x(new Date(vaccineAdminDate)) - x.range()[0]) > 1) {
         annotLine4.attr("x",x(new Date(vaccineAdminDate)));
         annotLine4.attr("display","block");
 
@@ -329,7 +329,7 @@ function displayChart(data){
         annotText4.attr("display","none");
       };
 
-      if ((x(new Date(casesDropDate)) - x.range()[0]) > 10) {
+      if ((x(new Date(casesDropDate)) - x.range()[0]) > 1) {
         annotLine5.attr("x",x(new Date(casesDropDate)));
         annotLine5.attr("display","block");
 
@@ -340,7 +340,7 @@ function displayChart(data){
         annotText5.attr("display","none");
       };
 
-      if ((x(new Date(lowestPointDate)) - x.range()[0]) > 10) {
+      if ((x(new Date(lowestPointDate)) - x.range()[0]) > 1) {
         annotLine6.attr("x",x(new Date(lowestPointDate)));
         annotLine6.attr("display","block");
 
