@@ -15,16 +15,14 @@ var margin = {top: 20, right: 20, bottom: 110, left: 150},
 
 function displayChart(data){
 
-  //d3.selectAll('svg').remove();
+  d3.selectAll('svg').remove();
 
   // append the svg object to the body of the page
-  /*
+
   var svg = d3.select("#my_dataviz")
       .append("svg")
           .attr("width", 1400)
           .attr("height", 400);
-  */
-  var svg = d3.select("svg")
 
   // Add X axis --> it is a date format
 
