@@ -64,7 +64,7 @@ function displayChart(data){
     .append("rect")
     .attr("stroke-width", "1px")
     .attr("fill","maroon")
-    .attr("width", "2px")
+    .attr("width", "5px")
     .attr("height", height)
     .attr("x",x(new Date(casesMultiplyDate)));
 
@@ -82,7 +82,7 @@ function displayChart(data){
     .append("rect")
     .attr("stroke-width", "1px")
     .attr("fill","maroon")
-    .attr("width", "2px")
+    .attr("width", "5px")
     .attr("height", height)
     .attr("x",x(new Date(curveFlattenOverDate)));
 
@@ -100,7 +100,7 @@ function displayChart(data){
     .append("rect")
     .attr("stroke-width", "1px")
     .attr("fill","maroon")
-    .attr("width", "2px")
+    .attr("width", "5px")
     .attr("height", height)
     .attr("x",x(new Date(wave2StartDate)));
 
@@ -118,7 +118,7 @@ function displayChart(data){
     .append("rect")
     .attr("stroke-width", "1px")
     .attr("fill","maroon")
-    .attr("width", "2px")
+    .attr("width", "5px")
     .attr("height", height)
     .attr("x",x(new Date(vaccineAdminDate)));
 
@@ -136,7 +136,7 @@ function displayChart(data){
     .append("rect")
     .attr("stroke-width", "1px")
     .attr("fill","maroon")
-    .attr("width", "2px")
+    .attr("width", "5px")
     .attr("height", height)
     .attr("x",x(new Date(casesDropDate)));
 
@@ -154,7 +154,7 @@ function displayChart(data){
     .append("rect")
     .attr("stroke-width", "1px")
     .attr("fill","maroon")
-    .attr("width", "2px")
+    .attr("width", "5px")
     .attr("height", height)
     .attr("x",x(new Date(lowestPointDate)));
 

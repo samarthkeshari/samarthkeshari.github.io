@@ -1,6 +1,6 @@
 .header {
     text-align: center;
-    font-family:'Courier New', Courier, monospace;
+    font-family:sans-serif;
 }
 
 body {
@@ -36,7 +36,7 @@ text {
 }
 
 .tick text {
-    font-size: 1em;
+    font-size: 1.5em;
     fill: #635F5D;
 }
 
@@ -45,7 +45,7 @@ text {
 }
 
 .axis-label {
-    font-size: 1.5em;
+    font-size: 1.8em;
     fill: #8E8883;
 }
 
@@ -59,12 +59,12 @@ text {
     text-align: left;
     margin-left: 75px;
     margin-bottom: 30px;
-    font-family:'Courier New', Courier, monospace;
+    font-family:sans-serif;
   }
 
 #menus select {
     font-size: 1rem;
-    font-family:'Courier New', Courier, monospace;
+    font-family:sans-serif;
   }
 
 #menus select option {
@@ -75,7 +75,7 @@ text {
     text-align: left;
     margin-left: 75px;
     padding-bottom: 10px;
-    font-family:'Courier New', Courier, monospace;
+    font-family:sans-serif;
 }
 
 .tooltip {
@@ -144,26 +144,26 @@ text {
 #overview-section {
     text-align: left;
     margin-left: 75px;
-    font-family:'Courier New', Courier, monospace;
+    font-family:sans-serif;
 }
 
 #state-section {
     text-align: left;
     margin-left: 75px;
     display: none;
-    font-family:'Courier New', Courier, monospace;
+    font-family:sans-serif;
 }
 
 #county-section {
     text-align: left;
     margin-left: 75px;
     display: none;
-    font-family:'Courier New', Courier, monospace;
+    font-family:sans-serif;
 }
 
 #footer {
     font-style: oblique;
     font-size:1em;
     margin-left: 75px;
-    font-family:'Courier New', Courier, monospace;
+    font-family:sans-serif;
 }
