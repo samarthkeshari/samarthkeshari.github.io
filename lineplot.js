@@ -52,7 +52,7 @@ function displayChart(data){
   ///
   var casesMultiplyDate = "03-20-2020";
   var curveFlattenOverDate = "06-15-2020";
-  var wave2StartDate = "09-07-2020";
+  var wave2StartDate = "10-11-2020";
   var vaccineAdminDate = "02-26-2021";
   var casesDropDate = "04-25-2021";
   var lowestPointDate = "06-20-2021";
