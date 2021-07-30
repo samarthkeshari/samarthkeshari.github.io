@@ -144,6 +144,7 @@ text {
 
 #overview-section {
     text-align: left;
+    margin-top:-5px;
     margin-left: 75px;
     margin-right: 150px;
     font-size:15px;
@@ -168,9 +169,10 @@ text {
     font-family:sans-serif;
 }
 
-#footer {
+#note {
     font-style: oblique;
     font-size:0.8em;
+    margin-top:-5px;
     margin-left: 75px;
     margin-right: 150px;
     font-family:sans-serif;
