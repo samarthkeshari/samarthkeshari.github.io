@@ -54,7 +54,7 @@ function displayChart(data){
   var casesMultiplyDate = "03-20-2020";
   var curveFlattenOverDate = "06-15-2020";
   var wave2StartDate = "10-11-2020";
-  var vaccineAdminDate = "02-26-2021";
+  var vaccineAdminDate = "01-24-2021";
   var casesDropDate = "04-25-2021";
   var lowestPointDate = "06-20-2021";
   var fontsize = 12;
@@ -129,7 +129,7 @@ function displayChart(data){
     .attr("font-size",fontsize)
     .attr("x",x(new Date(vaccineAdminDate))+4)
     .attr("y", 20 )
-    .text("<-Vaccine Started(US)");
+    .text("<-Vaccination Started(US)");
 
   const annotLine5 = svg
     .append("g")
