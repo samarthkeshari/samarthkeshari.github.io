@@ -2,6 +2,7 @@ import {displayChart} from './lineplot.js';
 import {dropdownMenu} from './dropdownMenu.js';
 
 var defaultState = 'Alabama';
+
 //var data;
 function displayStates(data) {
     let options = [...new Set(data.map(d => d.state))].sort();
@@ -11,9 +12,11 @@ function displayStates(data) {
     dropdownMenu(d3.select('#menus'),{
         options: options,
         onOptionClicked: state => {
+            defaultState = state;
             var selectedData = data.filter(d => { return d.state == state});
             displayChart(selectedData);
-        }
+        },
+        selectedOption:defaultState
     });
 }
 
@@ -40,4 +43,4 @@ function casesStates(){
         });
 };
 
-export {casesStates}
+export {casesStates,defaultState}

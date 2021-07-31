@@ -1,11 +1,16 @@
 import { displayChart } from './lineplot.js';
 import { dropdownMenu } from './dropdownMenu.js';
 import { data } from './main.js';
+import { defaultState } from './state.js';
 
 var defaultCounty = 'Alabama,Autauga';
 
 function displayCounties() {
-    let options = [...new Set(data.map(d => d.county))].sort();
+    //let options = [...new Set(data.map(d => d.county))].sort();
+    //var selectedData = data.filter(d => { return d.county == defaultCounty});
+
+    var stateData = data.filter(d => { return d.state == defaultState});
+    let options = [...new Set(stateData.map(d => d.county))].sort();
     var selectedData = data.filter(d => { return d.county == defaultCounty});
 
     displayChart(selectedData);
@@ -13,9 +18,11 @@ function displayCounties() {
     dropdownMenu(d3.select('#menus'),{
         options: options,
         onOptionClicked: county => {
+            defaultCounty = county;
             var selectedData = data.filter(d => { return d.county == county});
             displayChart(selectedData);
-        }
+        },
+        selectedOption:defaultCounty
     });
 }
 
