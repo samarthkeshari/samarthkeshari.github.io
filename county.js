@@ -3,7 +3,7 @@ import { dropdownMenu } from './dropdownMenu.js';
 import { data } from './main.js';
 import { defaultState } from './state.js';
 
-var defaultCounty = 'Alabama,Autauga';
+var defaultCounty = 0;
 
 function displayCounties() {
     //let options = [...new Set(data.map(d => d.county))].sort();
@@ -11,8 +11,13 @@ function displayCounties() {
 
     var stateData = data.filter(d => { return d.state == defaultState});
     let options = [...new Set(stateData.map(d => d.county))].sort();
-    var selectedData = data.filter(d => { return d.county == defaultCounty});
 
+    if (defaultCounty==0) {
+        defaultCounty=options[0];
+    };
+
+    var selectedData = data.filter(d => { return d.county == defaultCounty});
+    console.log(options[0]);
     displayChart(selectedData);
 
     dropdownMenu(d3.select('#menus'),{
