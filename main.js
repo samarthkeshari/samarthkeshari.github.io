@@ -49,7 +49,7 @@ function previousButtonClick(){
 };
 
 function nextButtonClick(){
-    //const prevButton = document.getElementById("P");
+    const prevButton = document.getElementById("P");
     const nextButton = document.getElementById("N");
 
     previous_slide = current_slide;
@@ -60,7 +60,7 @@ function nextButtonClick(){
         nextButton.disabled = true;
         casesByCounty();
     };
-    //prevButton.disabled = false;
+    prevButton.disabled = false;
 
     // Call the neccessary function
     if (current_slide === 2){
@@ -70,13 +70,14 @@ function nextButtonClick(){
 
 function overview() {
     //addHtml();
-    //const prevButton = document.getElementById("P");
-    //prevButton.disabled = true;
+    const prevButton = document.getElementById("P");
+    prevButton.disabled = true;
     current_slide = 1;
 
     const nextButton = document.getElementById("N");
     nextButton.disabled = false;
 
+    /*
     const button1 = document.getElementById("1");
     button1.disabled = true;
 
@@ -85,6 +86,7 @@ function overview() {
 
     const button3 = document.getElementById("3");
     button3.disabled = false;
+    */
 
     loadCountyData();
     casesOverview();
@@ -92,10 +94,14 @@ function overview() {
 
 function casesByStates() {
 
+    //const prevButton = document.getElementById("P");
+    //prevButton.disabled = true;
+
     current_slide = 2;
     const nextButton = document.getElementById("N");
     nextButton.disabled = false;
 
+    /*
     const button1 = document.getElementById("1");
     button1.disabled = false;
 
@@ -104,6 +110,7 @@ function casesByStates() {
 
     const button3 = document.getElementById("3");
     button3.disabled = false;
+    */
 
     menus.textContent = "Select State    ";
     casesStates();
@@ -116,6 +123,7 @@ function casesByCounty() {
     const nextButton = document.getElementById("N");
     nextButton.disabled = true;
 
+    /*
     const button1 = document.getElementById("1");
     button1.disabled = false;
 
@@ -124,6 +132,7 @@ function casesByCounty() {
 
     const button3 = document.getElementById("3");
     button3.disabled = true;
+    */
 
     menus.textContent = "Select County  ";
     casesCounties();
@@ -132,11 +141,12 @@ function casesByCounty() {
 // Event Listener
 window.main = overview();
 
-//document.getElementById("P").onclick = previousButtonClick;
-//document.getElementById("N").onclick = nextButtonClick;
-document.getElementById("1").onclick = overview;
-document.getElementById("2").onclick = casesByStates;
-document.getElementById("3").onclick = casesByCounty;
+document.getElementById("P").onclick = previousButtonClick;
 document.getElementById("N").onclick = nextButtonClick;
+
+//document.getElementById("1").onclick = overview;
+//document.getElementById("2").onclick = casesByStates;
+//document.getElementById("3").onclick = casesByCounty;
+//document.getElementById("N").onclick = nextButtonClick;
 
 export {data};
